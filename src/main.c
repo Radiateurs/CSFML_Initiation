@@ -27,7 +27,7 @@ rectangle_t         create_rectangle()
 
     rect.start = start;
     rect.end = end;
-    rect.thickness = 10;
+    rect.thickness = 20;
     rect.color = sfBlue;
     return (rect);
 }
