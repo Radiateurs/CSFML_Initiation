@@ -46,28 +46,6 @@ void                framebuffer_destroy(framebuffer_t *buffer)
 }
 
 /*
-** @function    put_pixel           Set a pixel at pos width x height at color
-** @params      buffer              The framebuffer being set with the new pixel
-** @params      x                   position x of pixel 
-** @params      y                   position y of pixel
-** @params      color               the color of the pixel
-** @returns     void
-*/
-void                put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color)
-{
-    unsigned int    pos;
-
-    if (buffer == NULL || buffer->pixels == NULL ||     \
-        buffer->width <= x || buffer->height <= y)
-        return ;
-    pos = (buffer->width * y + x) * (BPP / 8);
-    buffer->pixels[pos] = color.r;
-    buffer->pixels[pos + 1] = color.g;
-    buffer->pixels[pos + 2] = color.b;
-    buffer->pixels[pos + 3] = color.a;
-}
-
-/*
 ** @function    frambuffer_to_texture   Display theframebuffer to a window at pos x y
 ** @params      buffer                  The framebuffer to convert
 ** @returns     sfTexture*              Returns a pointer to the new texture
