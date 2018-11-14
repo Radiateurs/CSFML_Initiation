@@ -24,7 +24,10 @@ CFLAGS = 	-W -Wall -Werror -I./include/
 NAME =		not_a_virus
 
 SRCS =		src/main.c		\
-		src/framebuffer.c
+		src/framebuffer.c	\
+		src/pixels.c		\
+		src/line.c		\
+		src/rectangle.c
 
 OBJS =		$(SRCS:.c=.o)
 
@@ -39,7 +42,6 @@ clean:
 fclean:		clean
 		$(RM) $(NAME)
 
-re:
-		fclean all
+re:		fclean all
 
 .PHONY:		all $(NAME) clean fclean re
