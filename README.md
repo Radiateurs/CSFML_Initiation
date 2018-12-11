@@ -22,4 +22,8 @@ This should display a window with a 10x10 red square on the top left corner of t
 
 # CSFML DOCUMENTATION
 
+From epitech student(s) :
 https://epitech-2022-technical-documentation.readthedocs.io/en/latest/csfml.html
+
+Bocal's documentation :
+https://cdn.local.epitech.eu/elearning/B-MUL-100/CSFML-Documentation/index.htm
